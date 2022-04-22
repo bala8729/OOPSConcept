@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOPSConcept", "OOPSConcept\OOPSConcept.csproj", "{FEB20F5B-4B00-4A86-8D24-CE4F02DC4982}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{A22888CF-BA98-4045-BF06-44FACC4CDAEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEB20F5B-4B00-4A86-8D24-CE4F02DC4982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB20F5B-4B00-4A86-8D24-CE4F02DC4982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB20F5B-4B00-4A86-8D24-CE4F02DC4982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB20F5B-4B00-4A86-8D24-CE4F02DC4982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A22888CF-BA98-4045-BF06-44FACC4CDAEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A22888CF-BA98-4045-BF06-44FACC4CDAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A22888CF-BA98-4045-BF06-44FACC4CDAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A22888CF-BA98-4045-BF06-44FACC4CDAEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5AB8F1B-0960-458B-BA87-B3596C112DB5}
+	EndGlobalSection
+EndGlobal
