@@ -11,8 +11,8 @@ namespace BLL
 
     }
 
-    public void SolveProblem()
+    /*public void SolveProblem()
     {
         
-    }
+    }*/
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace OOPSConcept
     {
         public int hourlysalary { get; set; }
 
-        public PartTimeEmployee(int id, string name, string dept, int hourlysal) : base(id, name, dept, hourlysal)
+        public PartTimeEmployee(int id, string name, string dept, int hourlysal, IFinanceTeam team) : base(id, name, dept, hourlysal, team)
         {
             this.hourlysalary = hourlysal;            
         }

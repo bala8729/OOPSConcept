@@ -1,4 +1,5 @@
 ﻿using System;
+using BLL;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OOPSConcept
 {
-    class Employee
+    abstract class Employee
     {
         /*public Employee(int id, string name, string dept, int sal)
         {
@@ -17,19 +18,44 @@ namespace OOPSConcept
         }*/
 
         //public ITTeam ITTeam { get; set; }
-        //public IFinanceTeam FinanceTeam { get; set; }
+        public IFinanceTeam FinanceTeam { get; set; }
         //public FinanceTeam obj;
 
-        public Employee(int id, string name, string dept, int sal)
+        public Employee(int id, string name, string dept, int sal, IFinanceTeam team)
         {
             this.ID = id;
             this.Name = name;
-            this.Department = dept; 
+            this.Department = dept;
             this.salary = sal;
             //ITTeam = new ITTeam();
-        }
-        public int ID { get; set; }
+            FinanceTeam = team;            
+         }
 
+        private int _ID;
+        public int ID 
+        {
+            get
+            {
+                return this._ID;
+            }
+            set 
+            {
+                if (!this.Validate(value))
+                {
+                    throw new Exception("Invalid value");
+                }    
+                this._ID = value;
+            }            
+        }
+
+        private bool Validate(int id)
+        {
+            if (id < 1)
+            {
+                return false;
+            }
+            return true;
+        }
         public string Name { get; set; }
         public string Department { get; set; }
 
@@ -41,10 +67,12 @@ namespace OOPSConcept
             //ITTeam.SolveProblem();
         }
 
-        public void GetSalary()
+        public virtual void GetSalary()
         {
             Console.WriteLine(this.ID+" "+this.Name+" "+this.Department);
             Console.WriteLine("Salary credited "+this.salary);
+            FinanceTeam.TakeRequestFromEmployee();
         }
+        
     }
 }
